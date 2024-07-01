@@ -1,0 +1,59 @@
+service: serverless-bert
+
+provider:
+  name: aws
+  runtime: python3.10
+  architecture: arm64 
+  region: us-east-1
+  timeout: 60
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - s3:getObject
+      Resource: arn:aws:s3:::flexflowbucket
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    zip: true
+    slim: true
+    strip: false
+    noDeploy:
+      - docutils
+      - jmespath
+      - pip
+      - python-dateutil
+      - setuptools
+      - six
+      - tensorboard
+    useStaticCache: true
+    useDownloadCache: true
+    cacheLocation: './cache'
+package:
+  individually: false
+  exclude:
+    - package.json
+    - package-log.json
+    - node_modules/**
+    - cache/**
+    - test/**
+    - __pycache__/**
+    - .pytest_cache/**
+    - model/pytorch_model.bin
+    - raw/**
+    - .vscode/**
+    - .ipynb_checkpoints/**
+
+functions:
+  classify:
+    memorySize: 3008
+    timeout: 60
+    image: 851725575619.dkr.ecr.us-east-1.amazonaws.com/bert-lambda:latest
+    events:
+      - http:
+          path: classify
+          method: post
+          cors: true
+
+plugins:
+  - serverless-python-requirements

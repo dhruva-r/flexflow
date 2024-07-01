@@ -1,0 +1,2 @@
+https://files.pythonhosted.org/packages/ed/ab/37003a4a7ff095827b5f21f82a77d2d980ebdfb2cf4b05a47e708453b1f4/torch-2.2.1-cp310-cp310-manylinux2014_aarch64.whl
+transformers

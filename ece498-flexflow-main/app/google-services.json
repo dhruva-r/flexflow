@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "387416360094",
+    "project_id": "flexflow-94eda",
+    "storage_bucket": "flexflow-94eda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387416360094:android:31e897d3e07382ca6c678f",
+        "android_client_info": {
+          "package_name": "com.example.flexflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387416360094-4142ku8848mm9k7ovetkt6m3eagt5m67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flexflow",
+            "certificate_hash": "8de9f8704f0e943327e520113c062310616d81a0"
+          }
+        },
+        {
+          "client_id": "387416360094-toa4vjs2r8q6cn95iaekst253j8l8936.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Beuo3e_v2qS_bzB4svz7VWa1zo0b-3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387416360094-toa4vjs2r8q6cn95iaekst253j8l8936.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
