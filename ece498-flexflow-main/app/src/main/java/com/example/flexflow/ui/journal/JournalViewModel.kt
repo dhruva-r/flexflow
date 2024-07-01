@@ -91,7 +91,7 @@ class JournalViewModel @Inject constructor(
             println(_uiState.value.journal_entry)
             println("test printout")
             val request = Request.Builder()
-                .url("https://nt8szr9vcl.execute-api.us-east-1.amazonaws.com/dev/classify")
+                .url("https://.execute-api.us-east-1.amazonaws.com/dev/classify")
                 .post(_uiState.value.journal_entry.toRequestBody(JSON))
                 .build()
 
